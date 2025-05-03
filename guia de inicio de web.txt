@@ -1,0 +1,123 @@
+¡Perfecto, Max! Acá tenés la guía paso a paso para iniciar tu proyecto web llamado duoclick, con una app llamada App1, un template base index.html, y estructura lista para incluir tanto una landing page como navegación con menú hamburguesa.
+
+🛠️ GUÍA DE INICIO – Proyecto Django: duoclick
+1. 📁 Crear la carpeta del proyecto
+
+mkdir duoclick
+cd duoclick
+2. 🐍 Crear y activar entorno virtual
+
+pip install virtualenv
+python -m venv env_duoclick       # podés cambiar el nombre si querés
+
+# Activar entorno (en Windows)
+.\duoclickenv\Scripts\activate
+
+# (En Linux/Mac)
+source env_duoclick/bin/activate
+3. 📦 Instalar Django y crear archivo de requerimientos
+
+pip install django
+pip freeze > requirements.txt
+4. 🏗️ Crear el proyecto y la app
+
+django-admin startproject duoclick .
+python manage.py startapp App1
+La app App1 será usada para el mantenimiento y funcionalidades generales.
+
+5. ⚙️ Configurar el proyecto
+Agregar App1 al archivo settings.py:
+
+INSTALLED_APPS = [
+    ...
+    'App1',
+]
+Configurar templates y archivos estáticos: En settings.py, agregar (si no está):
+
+
+import os
+
+TEMPLATES = [
+    {
+        ...
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        ...
+    }
+]
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+6. 📁 Crear carpetas de estructura
+
+mkdir templates
+mkdir static
+mkdir templates/App1
+En templates/App1/, agregá tu archivo index.html base.
+
+Podés usar plantillas desde: https://htmlrev.com/free-bootstrap-templates.html
+
+7. 🧱 Crear la vista base
+En App1/views.py:
+
+
+
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'App1/index.html')
+8. 🌐 Conectar URLs
+En duoclick/urls.py:
+
+
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('App1.urls')),  # Conectar rutas de App1
+]
+Crear archivo App1/urls.py:
+
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+9. 🧬 Migraciones y levantar servidor
+
+
+
+python manage.py migrate
+python manage.py 
+Abrí en tu navegador: http://localhost:8000
+
+10. ✨ Agregar diseño y navegación
+Usá una plantilla Bootstrap como base.
+
+Insertá tu navbar hamburguesa en index.html usando el componente navbar de Bootstrap.
+
+(archivos estaticos)
+Asegurate de que los enlaces de navegación usen {% static 'nombre_de_vista' %} 
+(navegación)
+Asegurate de que los enlaces de navegación usen {% url 'nombre_de_vista' %} 
+
+No olvides {% load static %} al principio del html
+
+si estás usando el motor de Django.
+
+Si ya estoy parado en el directorio correr: 
+
+python manage.py migrate
+
+python manage.py runserver
+para levantar el servidor. 
+
+python manage.py collectstatic
+para actualizar elemnetos estaticos
+
+python manage.py makemigrations App1(ejemplo)
+
