@@ -1,0 +1,26 @@
+Guia de inicio de proyecto 
+
+
+pip install virtualenv (Instalar el entorno virtual)
+
+python -m venv ¨nombre del entorno" (Crea carpeta del entorno virtual con otras dependencias)
+
+cd ./entorno-virtual (ingreso a carpeta entorno virtual) 
+
+.\Scripts\activate (activa el entorno-virtual) 
+
+pip freeze > requirements.txt (Creacion de archivo con requeriments para correr esta Web)
+
+django-admin startproject Proyecto1 . (Crea el proyecto dentro del entorno virtual) 
+
+python manage.py migrate (Creacion de tablas y manipulacion de datos) 
+
+python manage.py runserver (Inicializacion del servidor)
+
+En el buscador : http://localhost:8000/ (Visualizacion del servidor en la Web) 
+
+python manage.py startapp "Nombre ejemplo" (creacion de aplicacion para ordenar el codigo/funciones y mantenimiento)
+
+EJEMPLOS DE TEMPLATES https://htmlrev.com/free-bootstrap-templates.html
+
+
