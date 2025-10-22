@@ -1,4 +1,5 @@
-¡Perfecto, Max! Acá tenés la guía paso a paso para iniciar tu proyecto web llamado duoclick, con una app llamada App1, un template base index.html, y estructura lista para incluir tanto una landing page como navegación con menú hamburguesa.
+¡Perfecto, Max! Acá tenés la guía paso a paso para iniciar tu proyecto web llamado duoclick, con una app llamada App1, un template base index.html, 
+y estructura lista para incluir tanto una landing page como navegación con menú hamburguesa.
 
 🛠️ GUÍA DE INICIO – Proyecto Django: duoclick
 1. 📁 Crear la carpeta del proyecto
