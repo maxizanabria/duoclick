@@ -122,3 +122,11 @@ para actualizar elemnetos estaticos
 
 python manage.py makemigrations App1(ejemplo)
 
+///////////////////////////////////////////////////////////////
+SUBIDA A GIT ACTUALIZACION DE WEB
+
+A partir de ahora vas a poder subir actualizaciones libremente con:
+
+git add .
+git commit -m "actualización"
+git push
