@@ -128,5 +128,5 @@ SUBIDA A GIT ACTUALIZACION DE WEB
 A partir de ahora vas a poder subir actualizaciones libremente con:
 
 git add .
-git commit -m "actualización"
+git commit -m "subida de diseño 1"
 git push
