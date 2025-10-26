@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso / Stampank</title>
+
+    <link rel="stylesheet" href="static/assets/css/ingresar.css">
+</head>
+<body>
+
+    <div id="fondo"></div>
+
+    <div class="login-box">
+        <h1>STAMPANK</h1>
+        <p>El pasado estampado en el futuro</p>
+        <form action="{% url 'home' %}" method="get">
+            <button type="submit" class="btn-ingresar">Ingresar</button>
+        </form>
+    </div>
+
+    <script type="module" src="static/assets/js/ingresar.js"></script>
+</body>
+</html>

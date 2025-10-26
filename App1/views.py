@@ -17,3 +17,13 @@ def index(request):
 def landing(request):
     return render(request, 'landing.html')
 
+
+def ingresar(request):
+    if request.method == "POST":
+        return redirect('index')  # redirige a tu página principal
+    return render(request, 'ingresar.html')
+def home(request):
+    return render(request, 'index.html')
+
+def ingresar(request):
+    return render(request, 'ingresar.html')
