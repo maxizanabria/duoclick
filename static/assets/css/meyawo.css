@@ -11190,6 +11190,12 @@ p {
 
 .portfolio-card .portfolio-card-img {
   width: 100%;
+  
+}
+.portfolio-card:hover .portfolio-card-img {
+    transform: scale(1.5); /* Ajustá el valor del zoom */
+    cursor: zoom-in;
+    z-index: 2;
 }
 
 .portfolio-card .portfolio-card-overlay {

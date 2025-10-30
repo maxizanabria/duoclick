@@ -1,24 +1,29 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso / Stampank</title>
-
-    <link rel="stylesheet" href="static/assets/css/ingresar.css">
+    <link rel="stylesheet" href="{% static 'assets/css/ingresar.css' %}">
 </head>
 <body>
-
-    <div id="fondo"></div>
-
+      <!-- Caja de login -->
     <div class="login-box">
-        <h1>STAMPANK</h1>
-        <p>El pasado estampado en el futuro</p>
+        <h1><img src="{% static 'assets/imgs/logo.png' %}" alt="logo"></h1>
         <form action="{% url 'home' %}" method="get">
             <button type="submit" class="btn-ingresar">Ingresar</button>
         </form>
     </div>
 
-    <script type="module" src="static/assets/js/ingresar.js"></script>
+    <!-- Fondo animado -->
+    <div id="universe"></div>
+
+
+    <!-- Script de la animación -->
+
+<script src="{% static 'assets/js/starfield.js' %}"></script>
+
 </body>
 </html>
